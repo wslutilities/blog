@@ -1,0 +1,14 @@
+
+<div>
+    <span class="blue">you</span>@<span class="green">wslu_site</span><span class="red">$</span>
+    <span class="green">ls</span> -g --time-style=+"%Y %b %d" .<%= url_for(path).replace("index.html","") %> 
+    <br />
+	<% page.posts.each(function (post) { %>
+		-rw-r--r--  1   patrick  -- <time><%= date(post.date,  "YYYY MMM DD") %></time>
+		<a class="white" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
+		</span><br/>
+	<% }) %>
+
+    <%- partial('_partial/paginator') %>
+</div>
+<br />

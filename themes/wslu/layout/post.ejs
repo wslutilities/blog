@@ -1,0 +1,11 @@
+<article class="post">
+	<%- partial('_partial/_post/header',{post: page}) %>
+	<div>
+		<% if (page.excerpt && page.hide_excerpt ){ %>
+			<%- page.more %>
+		<%} else{%>
+			<%- page.content %>
+		<%}%>
+	</div>
+	<%- partial('_partial/_post/footer',{post: page}) %>
+</article>

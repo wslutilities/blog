@@ -1,0 +1,26 @@
+<span class="blue">you</span>@<span class="green">wslu_site</span><span class="red">$</span>
+<span class="green">cat</span> ./posts/_Navigation
+<br />
+<% if (page.prev || page.next){ %>
+<nav>
+  <% if (page.prev){ %>
+  <div>
+    Next Post:
+    <% var title = truncate(page.prev.title , {length:60}) %>
+    <a class="white" href="<%- url_for(page.prev.path) %>">
+      <%= title ||  __('Untitled') %>
+    </a>
+  </div>
+  <% } %>
+  <% if (page.next){ %>
+  <div>
+      Previous Post:
+      <% var title = truncate(page.next.title, {length:60}) %>
+      <a class="white" href="<%- url_for(page.next.path) %>">
+        <%= title ||  __('Untitled') %>
+      </a>
+  </div>
+  <% } %>
+</nav>
+<% } %>
+<br/>

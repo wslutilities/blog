@@ -1,0 +1,21 @@
+<span class="blue">you</span>@<span class="green">wslu_site</span><span class="red">$</span>
+<span class="green">cat</span> ./posts/_Paginator
+<br /><br />
+<% if (page.total > 1){ %>
+You are at: <strong></strong>Page <%= page.current %></strong>.
+<br />
+<% if (page.prev) { %>
+<a class="white" href="<%- url_for(page.prev_link) %>">Previous Page</a>
+<% } else {%>
+Previous Page
+<% } %>
+<% if (page.next) { %>
+<a class="white" href="<%- url_for(page.next_link) %>">Next Page</a>
+<% } else {%>
+Next Page
+<% } %>
+<% } else { %>
+There is only one page, so no paginator ¯\_(ツ)_/¯
+<% } %>
+
+<br/><br/>

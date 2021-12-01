@@ -1,0 +1,71 @@
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+  <%
+    var title = titlecase(page.title);
+
+    if (is_archive()){
+      title = 'Archives';   
+    } else if (is_category()){
+      title = page.category;
+    } else if (is_tag()){
+      title = __('Page.Tags') + ': ' + page.tag;
+  }
+  %>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@wslutilities" />
+  <meta name="twitter:creator" content="@wslutilities" />
+  <meta property="og:url" content="<%= config.url + '/' + page.path %>" />
+  <meta property="og:title" content="<% if (title){ %><%= title %> | <% } %><%= config.title %>" />
+  <meta property="og:image" content="https://cdn.patrickwu.space/base/social.png" />
+  <title><% if (title){ %> <%= title %> | <% } %>WSL Utilities </title>
+
+
+  <link rel="icon" type="image/png" href="https://github.com/wslutilities/wslu/raw/master/extras/icon.png" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+
+  <script type="text/javascript">
+    //<![CDATA[
+    function getCookie(cname) {
+      var name = cname + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function Toptout() {
+      document.cookie = "patblog_track_is_opt_out=a; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/;";
+      window['patblog_track_is_opt_out'] = 'a';
+    }
+    var owa_baseUrl = 'https://api.patrickwu.space/analytics/';
+    var owa_cmds = owa_cmds || [];
+    owa_cmds.push(['setSiteId', 'f6eb61f8cd9b98df3e79264dbbe9c726']);
+    owa_cmds.push(['trackPageView']);
+    owa_cmds.push(['trackClicks']);
+    owa_cmds.push(['trackDomStream']);
+
+    (function () {
+      var _owa = document.createElement('script');
+      _owa.type = 'text/javascript';
+      _owa.async = true;
+      owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(
+        /http:/, 'https:') : owa_baseUrl);
+      _owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
+      var _owa_s = document.getElementsByTagName('script')[0];
+      _owa_s.parentNode.insertBefore(_owa, _owa_s);
+    }());
+    //]]>
+  </script>
+
+<link rel="stylesheet" href="//wslutiliti.es/style.css" />
+<%- css('blog') %> 
+</head>
