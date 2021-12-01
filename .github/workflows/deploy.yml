@@ -23,7 +23,7 @@ jobs:
         run: |
           git config --global user.email "me@patrickwu.space"
           git config --global user.name "Jinming Wu, Patrick"
-          git clone --depth 1 https://patrick330602:$GH_TOKEN@github.com/wslutilities/website.git
+          git clone --depth 1 https://patrick330602:$GH_TOKEN@github.com/wslutilities/website.git website
           mkdir -p ./website/blog
           cp -rf ./public/* ./website/blog
           git --git-dir=./website/.git --work-tree=./website add -A
