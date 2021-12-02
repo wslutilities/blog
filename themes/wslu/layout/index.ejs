@@ -1,14 +1,19 @@
-
 <div>
-    <span class="blue">you</span>@<span class="green">wslu_site</span><span class="red">$</span>
-    <span class="green">ls</span> -g --time-style=+"%Y %b %d" .<%= url_for(path).replace("index.html","") %> 
-    <br />
-	<% page.posts.each(function (post) { %>
-		-rw-r--r--  1   patrick  -- <time><%= date(post.date,  "YYYY MMM DD") %></time>
-		<a class="white" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
-		</span><br/>
-	<% }) %>
+	<span class="blue">you</span>@<span class="green">wslu_site</span><span class="red">$</span>
 
-    <%- partial('_partial/paginator') %>
+	<span class="green">ls</span> cat ./blog/README
+	<h1>WSL Utilities Blog</h1>
+	<a href="https://wslutiliti.es/blog/atom.xml">RSS (Atom)</a> <a href="https://wslutiliti.es/blog/rss2.xml">RSS
+		(RSS2)</a> <br /><br />
+	<span class="blue">you</span>@<span class="green">wslu_site</span><span class="red">$</span>
+	<span class="green">ls</span> -g --time-style=+"%Y %b %d" .<%= url_for(path).replace("index.html","") %>
+	<br /><br />
+	<% page.posts.each(function (post) { %>
+	-rw-r--r-- 1 patrick -- <time><%= date(post.date,  "YYYY MMM DD") %></time>
+	<a class="white" href="<%- url_for(post.path) %>"><%= post.title || __('Untitled')%></a>
+	</span><br />
+	<% }) %>
+	<br/>
+	<%- partial('_partial/paginator') %>
 </div>
 <br />
