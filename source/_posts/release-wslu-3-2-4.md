@@ -5,24 +5,20 @@ date: 2022-03-19 17:01:21
 
 This is a update that people have been waiting for a really long time... it packs a lot of important fixes for the issues that people have a lot of headache with. Hope you enjoy this update! Here is a full changelog:
 
-## :memo: Documentation
+## Documentation
 
 - Update Information for multiple Linux distributions (PR #203 by @crramirez )
 - moving documentation to the official documentation site
 - Improvement on manpage deployment
 
-## :sparkles: Improvements
+## Improvements
 
 - wslu: provides a more detailed WSL Interoperability Check ([Details](https://s.patrickwu.space/sgfzs))
 - wslu: improve parsing `/etc/wsl.conf` (fixes #200)
 - wslvar: Allow variable names with parentheses (PR #212 by @diddledani )
 - wslview: simplification of codes (closes #216)
 
-## :boom: Breaking Changes
-
-N/A
-
- ## :bug: Bug Fixes
+ ## Bug Fixes
 
 - wslu: ensuring `baseexec` works (PR #222 by @crramirez )
 - wslu: disable `chcp` workaround for higher versions of Windows (fixes #199)
