@@ -6,3 +6,4 @@ source/_drafts/
 node_modules/
 public/
 .deploy*/
+.dccache
