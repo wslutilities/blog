@@ -2,7 +2,7 @@
 title: wslu now available on Clear Linux
 date: 2022-08-08 03:07:15
 ---
-A few month later, I finally is able to fullfill [the request for adding Clear Linux](https://github.com/wslutilities/wslu/issues/124#issuecomment-1206740072): You can now finally install wslu from Clear Linux!
+A few month later, I finally am able to fullfill [the request for adding Clear Linux](https://github.com/wslutilities/wslu/issues/124#issuecomment-1206740072): You can now finally install wslu from Clear Linux!
 
 You can install using the following command:
 
