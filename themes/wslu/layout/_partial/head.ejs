@@ -25,46 +25,7 @@
   <link rel="icon" type="image/png" href="https://github.com/wslutilities/wslu/raw/master/extras/icon.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
 
-  <script type="text/javascript">
-    //<![CDATA[
-    function getCookie(cname) {
-      var name = cname + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-          return c.substring(name.length, c.length);
-        }
-      }
-      return "";
-    }
-
-    function Toptout() {
-      document.cookie = "patblog_track_is_opt_out=a; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/;";
-      window['patblog_track_is_opt_out'] = 'a';
-    }
-    var owa_baseUrl = 'https://api.patrickwu.space/analytics/';
-    var owa_cmds = owa_cmds || [];
-    owa_cmds.push(['setSiteId', 'f6eb61f8cd9b98df3e79264dbbe9c726']);
-    owa_cmds.push(['trackPageView']);
-    owa_cmds.push(['trackClicks']);
-    owa_cmds.push(['trackDomStream']);
-
-    (function () {
-      var _owa = document.createElement('script');
-      _owa.type = 'text/javascript';
-      _owa.async = true;
-      owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(
-        /http:/, 'https:') : owa_baseUrl);
-      _owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js';
-      var _owa_s = document.getElementsByTagName('script')[0];
-      _owa_s.parentNode.insertBefore(_owa, _owa_s);
-    }());
-    //]]>
-  </script>
+  <script async defer data-website-id="a38c1596-5c6f-49ee-979c-51da9e0967ce" src="https://analytics.wedotstud.io/umami.js"></script>
 
 <link rel="stylesheet" href="//wslutiliti.es/style.css" />
 <%- css('blog') %> 
