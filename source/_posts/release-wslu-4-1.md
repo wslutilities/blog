@@ -1,5 +1,5 @@
 ---
-title: wslu 4.0.0 is now released
+title: wslu 4.1.0 is now released
 date: 2022-10-27 11:20:07
 ---
 
