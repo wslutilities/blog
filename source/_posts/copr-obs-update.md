@@ -1,7 +1,6 @@
 ---
 title: 'From OBS to COPR: A migration of wslu packages'
 date: 2023-03-21 01:47:17
-tags:
 ---
 
 
